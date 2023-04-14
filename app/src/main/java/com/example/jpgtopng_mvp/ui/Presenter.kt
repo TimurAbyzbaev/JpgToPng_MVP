@@ -68,7 +68,7 @@ class Presenter(private val activity: AppCompatActivity) : Contract.Presenter {
     private fun convertImage(inputBitmap: Bitmap): Single<Bitmap> {
         return Single.create { emitter ->
             try {
-                sleep(1000) // simulate conversion process
+                //sleep(1000) // simulate conversion process
                 val outputStream = ByteArrayOutputStream()
                 inputBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
                 val outputBytes = outputStream.toByteArray()
